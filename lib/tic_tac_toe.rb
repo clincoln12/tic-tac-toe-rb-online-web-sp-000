@@ -41,7 +41,11 @@ def turn(board)
   input = gets.strip
   index = input_to_index(input)
   if valid_move?(board, index)
+<<<<<<< HEAD
     move(board, index, current_player(board))
+=======
+    move(board, index, "X" || "O")
+>>>>>>> 35fb07a7c4d7d92edba71676ab38adccbd720d68
     display_board(board)
   else
     turn(board)
@@ -108,13 +112,23 @@ end
 def winner(board)
   if won?(board)
     return "X" if board[won?(board)[0]] == "X"
+<<<<<<< HEAD
   "O"
+=======
+    "O"
+>>>>>>> 35fb07a7c4d7d92edba71676ab38adccbd720d68
   end
 end
 
 def play(board)
+<<<<<<< HEAD
   
   while over?(board) == false
+=======
+  9.times do
+  
+  if over?(board) == false
+>>>>>>> 35fb07a7c4d7d92edba71676ab38adccbd720d68
     turn(board)
   end
   
@@ -122,6 +136,10 @@ def play(board)
   
   puts "Congratulations #{winner(board)}!" if won?(board)
   
+<<<<<<< HEAD
+=======
+  end
+>>>>>>> 35fb07a7c4d7d92edba71676ab38adccbd720d68
 end
 
 
